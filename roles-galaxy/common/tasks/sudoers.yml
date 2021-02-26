@@ -1,0 +1,12 @@
+# Configure sudoers using /etc/sudoers.d
+###############################################################################
+
+---
+
+- name: "Install Additional Sudo Config"
+  template:
+    src: sudoers.j2
+    dest: "{{ common_sudoers_basedir }}/{{ common_sudoers_filename }}"
+    validate: 'visudo -cf %s'
+    mode: '0644'
+  when: common_sudoers_config | length > 0

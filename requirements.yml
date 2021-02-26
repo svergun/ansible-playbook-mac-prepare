@@ -1,0 +1,6 @@
+---
+
+- src: git@github.com:svergun/ansible-role-common.git
+  scm: git
+  version: "master"
+  name: common

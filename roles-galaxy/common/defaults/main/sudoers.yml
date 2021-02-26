@@ -1,0 +1,5 @@
+---
+
+common_sudoers_basedir: "/etc/sudoers.d"
+common_sudoers_filename: "sudoers"
+common_sudoers_config: []
