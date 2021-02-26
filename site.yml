@@ -1,0 +1,14 @@
+---
+
+- name: "MacOS PREPARE"
+  hosts: localhost
+  connection: local
+  become: no
+  gather_facts: no
+
+  pre_tasks:
+    - name: Update Ansible Roles
+      command: ansible-galaxy install -r requirements.yml -p ./roles-galaxy -f
+
+  roles:
+    - { role: common, role_action: sudoers, become: yes }
