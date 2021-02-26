@@ -1,3 +1,0 @@
-common_sudoers_filename: "admin-group"
-common_sudoers_config:
-  - "%admin		ALL = (ALL) NOPASSWD:ALL"
